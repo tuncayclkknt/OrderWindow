@@ -97,21 +97,21 @@ public class Main {
         panel4.setBorder(border4);
         panel4.setBounds(30, 510, 300, 200);
 
-        JLabel label3 = new JLabel("Choose a drink:");
+        JLabel label3 = new JLabel("Choose a dessert:");
         label3.setBounds(10,20,150,30);
 
         JRadioButton cakeRadio = new JRadioButton("Cake - $4.00");
-        cakeRadio.setBounds(10,70,150,30);
+        cakeRadio.setBounds(10,60,150,30);
 
         JRadioButton iceCreamRadio = new JRadioButton("Ice Cream - $3.00");
-        iceCreamRadio.setBounds(10,110,150,30);
+        iceCreamRadio.setBounds(10,100,150,30);
 
         ButtonGroup group = new ButtonGroup();
         group.add(cakeRadio);
         group.add(iceCreamRadio);
 
         JCheckBox extraToppings = new JCheckBox("Extra Toppings(+$1.00)");
-        extraToppings.setBounds(10,150,170,30);
+        extraToppings.setBounds(10,140,170,30);
 
         panel4.setLayout(null);
         panel4.add(label3);
@@ -129,6 +129,7 @@ public class Main {
         textArea.setBounds(20,20,415,560);
         textArea.setLineWrap(true);
         textArea.setWrapStyleWord(true);
+        textArea.setEditable(false);
 
         panel5.setLayout(null);
         panel5.add(textArea);
@@ -224,6 +225,9 @@ public class Main {
             water.setSelected(false);
             addIce.setSelected(false);
             extraToppings.setSelected(false);
+
+            nameTextField.setText("");
+            phoneTextField.setText("");
 
             comboBox.setSelectedIndex(0);
         });
